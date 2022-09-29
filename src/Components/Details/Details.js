@@ -1,10 +1,15 @@
 import React from 'react';
 import ("../Details/Details.css")
 
-const Details = () => {
+const Details = ({activity}) => {
+    console.log(activity)
+    let total=0;
+    for(const newActivity of activity){
+        total=total+newActivity.time
+    }
     return (
         <div className='details'>
-            <h2>Activity Details</h2>
+            <h2>Activity Details {activity.length}</h2>
 
             <div className="person">
                 <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" className='person-img' alt="" />
@@ -43,7 +48,7 @@ const Details = () => {
 
             <h2>Exercise Details</h2>
             <div className="">
-                <div className='ex-time'><h1>Exercise Time</h1> <p>0</p></div>
+                <div className='ex-time'><h1>Exercise Time</h1> <p>{total}</p></div>
             </div>
             <div className="">
                 <div className='ex-time'><h1>Break Time</h1> <p>0</p></div>

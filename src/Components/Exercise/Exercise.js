@@ -3,7 +3,7 @@ import ('../Exercise/Exercise.css')
 
 const Exercise = (props) => {
     const {name,img,time} = (props.exercise)
-    console.log(props)
+    
 
     return (
         <div className='card'>
