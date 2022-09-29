@@ -8,6 +8,7 @@ const Exercise = (props) => {
             <h1>{name}</h1>
             <img src={img} alt="" className='card-img center' />
             <p>Time Required : {time}s</p>
+            <button className='btn center'>Add</button>
         </div>
     );
 };

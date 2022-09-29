@@ -10,3 +10,12 @@ img{
 .center{
     text-align: center;
 }
+.btn{
+background-color: tomato;
+color: white;
+padding: 10px;
+font-size: 29px;
+width: 140px;
+border-radius: 20px;
+border: none;
+}
