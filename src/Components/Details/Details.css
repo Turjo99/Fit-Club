@@ -1,5 +1,7 @@
 .details{
     padding: 10px;
+    position: sticky;
+    top: 10px;
 }
 .person-img{
     height: 70px;
@@ -8,6 +10,7 @@
 }
 .person-details p{
     font-size: 20px;
+
 }
 .person{
     display: flex;

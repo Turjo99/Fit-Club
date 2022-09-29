@@ -9,11 +9,14 @@ const Exercises = () => {
         fetch('exercises.json').then(res=>res.json()).then(data=>setexercise(data))
         
     },[])
+    const click = (exercise)=>{
+        console.log(exercise)
+    }
 
     return (
         <div className='cards'>
             {
-                exercises.map(exersice=> <Exercise exercice={exersice}></Exercise>)
+                exercises.map(exercise=> <Exercise exercise={exercise} click={click}></Exercise>)
             }
         </div>
     );
