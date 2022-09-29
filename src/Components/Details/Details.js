@@ -30,7 +30,7 @@ const Details = ({activity}) => {
     return (
         <div className='details'>
             <ToastContainer /> 
-            <h2>Activity Details {activity.length}</h2>
+            <h2>Activity Details</h2>
 
             <div className="person">
                 <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" className='person-img' alt="" />
@@ -55,19 +55,19 @@ const Details = ({activity}) => {
 
             <div className="break">
                 <div className="time">
-                    <p onClick={()=>breakTime(10)}>10</p>
+                    <p onClick={()=>breakTime(10)}>10s</p>
                 </div>
                 <div  className="time">
-                    <p onClick={()=>breakTime(20)}>20</p>
+                    <p onClick={()=>breakTime(20)}>20s</p>
                 </div>
                 <div className="time">
-                    <p onClick={()=>breakTime(30)}>30</p>
+                    <p onClick={()=>breakTime(30)}>30s</p>
                 </div>
                 <div className="time">
-                    <p onClick={()=>breakTime(40)}>40</p>
+                    <p onClick={()=>breakTime(40)}>40s</p>
                 </div>
                 <div className="time">
-                    <p onClick={()=>breakTime(50)}>50</p>
+                    <p onClick={()=>breakTime(50)}>50s</p>
                 </div>
             </div>
 
@@ -80,7 +80,7 @@ const Details = ({activity}) => {
                 <div className='ex-time'><h1>Break Time</h1> <p>{btime}</p></div>
             </div>
             <div className="">
-                <button onClick={notify} className='completed'>Activity Completed</button>
+                <button onClick={notify} className='completed'>Finish Activity</button>
             </div>
         </div>
     );

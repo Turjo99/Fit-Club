@@ -32,7 +32,7 @@
     margin: 0 ;
 }
 .info-card{
-    background-color: rgb(210, 210, 210);
+    background-color: aliceblue;
     padding: 10px;
     border-radius: 10px;
 
@@ -49,6 +49,11 @@
 .time{
     background-color: white;
     border-radius: 50%;
+}
+.time:hover, .time::after{
+    background-color: tomato;
+    transition: 0.5s;
+    color: aliceblue;
 }
 .ex-time{
     display: flex;

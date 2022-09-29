@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
             <h3>The Fit Club</h3>
-            <p>Exersice The Way you Like Us and</p>
+            <p>Your full time exercise partner.</p>
         </div>
     );
 };
