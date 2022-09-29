@@ -1,7 +1,16 @@
 import React from 'react';
-import ("../Details/Details.css")
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ("../Details/Details.css");
+
+
 
 const Details = ({activity}) => {
+    const notify = () => toast.success("Congratulations You Have Done It!",{
+        position:"top-center",
+        
+        
+    });
     console.log(activity)
     let total=0;
     for(const newActivity of activity){
@@ -9,6 +18,7 @@ const Details = ({activity}) => {
     }
     return (
         <div className='details'>
+            <ToastContainer /> 
             <h2>Activity Details {activity.length}</h2>
 
             <div className="person">
@@ -54,7 +64,7 @@ const Details = ({activity}) => {
                 <div className='ex-time'><h1>Break Time</h1> <p>0</p></div>
             </div>
             <div className="">
-                <button className='completed'>Activity Completed</button>
+                <button onClick={notify} className='completed'>Activity Completed</button>
             </div>
         </div>
     );
