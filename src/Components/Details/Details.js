@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ("../Details/Details.css");
@@ -15,6 +16,16 @@ const Details = ({activity}) => {
     let total=0;
     for(const newActivity of activity){
         total=total+newActivity.time
+    }
+
+    const [btime,setbreakTime]= useState(localStorage.getItem("breaktime"))
+    
+    const breakTime=(time)=>{
+
+        console.log(time)
+        setbreakTime(time)
+        localStorage.setItem("breaktime",time);
+        
     }
     return (
         <div className='details'>
@@ -38,30 +49,35 @@ const Details = ({activity}) => {
 
             <h2>Add a break</h2>
 
+            {
+                
+            }
+
             <div className="break">
                 <div className="time">
-                    <p>10</p>
+                    <p onClick={()=>breakTime(10)}>10</p>
+                </div>
+                <div  className="time">
+                    <p onClick={()=>breakTime(20)}>20</p>
                 </div>
                 <div className="time">
-                    <p>20</p>
+                    <p onClick={()=>breakTime(30)}>30</p>
                 </div>
                 <div className="time">
-                    <p>30</p>
+                    <p onClick={()=>breakTime(40)}>40</p>
                 </div>
                 <div className="time">
-                    <p>40</p>
-                </div>
-                <div className="time">
-                    <p>50</p>
+                    <p onClick={()=>breakTime(50)}>50</p>
                 </div>
             </div>
 
             <h2>Exercise Details</h2>
             <div className="">
-                <div className='ex-time'><h1>Exercise Time</h1> <p>{total}</p></div>
+                <div className='ex-time'><h1>Exercise Time</h1> <p>{total}s</p></div>
             </div>
             <div className="">
-                <div className='ex-time'><h1>Break Time</h1> <p>0</p></div>
+                {/* <div className='ex-time'><h1>Break Time</h1> <p>{breakTime}</p></div> */}
+                <div className='ex-time'><h1>Break Time</h1> <p>{btime}</p></div>
             </div>
             <div className="">
                 <button onClick={notify} className='completed'>Activity Completed</button>
