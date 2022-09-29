@@ -3,7 +3,7 @@ import ("../Details/Details.css")
 
 const Details = () => {
     return (
-        <div>
+        <div className='details'>
             <h2>Activity Details</h2>
 
             <div className="person">
@@ -42,6 +42,15 @@ const Details = () => {
             </div>
 
             <h2>Exercise Details</h2>
+            <div className="">
+                <div className='ex-time'><h1>Exercise Time</h1> <p>0</p></div>
+            </div>
+            <div className="">
+                <div className='ex-time'><h1>Break Time</h1> <p>0</p></div>
+            </div>
+            <div className="">
+                <button className='completed'>Activity Completed</button>
+            </div>
         </div>
     );
 };
